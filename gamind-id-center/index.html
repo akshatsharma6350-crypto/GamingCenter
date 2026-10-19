@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming ID Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LOGIN PAGE -->
+    <section id="loginPage" class="login-page">
+        <div class="login-box">
+            <h1>🎮 GAMING ID CENTER</h1>
+            <p>Login to access your dashboard</p>
+
+            <form id="loginForm">
+                <input type="text" id="userId" placeholder="Enter User ID" required>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <button type="submit">LOGIN</button>
+                <p id="loginError" class="error"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <main id="dashboard" class="dashboard hidden">
+
+        <header>
+            <div>
+                <h1>🎮 GAMING ID CENTER</h1>
+                <p>Manage your gaming IDs</p>
+            </div>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+
+        <section class="welcome">
+            <h2>Welcome, Gamer!</h2>
+            <p>Check your ID status and collect your gaming IDs.</p>
+        </section>
+
+        <!-- ID CARDS -->
+        <section class="cards-grid">
+
+            <div class="id-card paid">
+                <span class="status paid-status">✓ FEES PAID</span>
+                <h2>Gaming ID 01</h2>
+                <p class="email">kumarigulabo790@gmail.com</p>
+                <p>Your payment has been completed.</p>
+                <button id="collectFirstBtn">Collect Your ID</button>
+            </div>
+
+            <div class="id-card unpaid">
+                <span class="status unpaid-status">⚠ PAYMENT PENDING</span>
+                <h2>Gaming ID 02</h2>
+                <p class="email">akhtarmoin326@gmail.com</p>
+                <p>Payment is required to collect this ID.</p>
+                <button class="pay-card-btn">Pay Now</button>
+            </div>
+
+            <div class="id-card unpaid">
+                <span class="status unpaid-status">⚠ PAYMENT PENDING</span>
+                <h2>Gaming ID 03</h2>
+                <p class="email">zishugamr@gmail.com</p>
+                <p>Payment is required to collect this ID.</p>
+                <button class="pay-card-btn">Pay Now</button>
+            </div>
+
+            <div class="id-card unpaid">
+                <span class="status unpaid-status">⚠ PAYMENT PENDING</span>
+                <h2>Gaming ID 04</h2>
+                <p class="email">artflow091@gmail.com</p>
+                <p>Payment is required to collect this ID.</p>
+                <button class="pay-card-btn">Pay Now</button>
+            </div>
+
+        </section>
+
+        <!-- COMBINED PAYMENT PANEL -->
+        <section class="payment-panel">
+            <h2>Collect Remaining 3 IDs</h2>
+            <p class="pricing-note">
+                    Price clarification: ₹299 + (₹200 x 3) = ₹899.
+                    The stated total is ₹1,497, leaving ₹598
+                    unexplained. Confirm the breakdown before payment.
+                </p>
+            <p>Collect all three pending IDs after completing the payment.</p>
+            <h3>₹1,497 <small>Fixed Amount</small></h3>
+
+            <div class="payment-buttons">
+                <button id="collectAllBtn">Collect All 3 IDs</button>
+                <button id="payNowBtn" class="secondary-btn">Pay Now</button>
+            </div>
+        </section>
+
+        <!-- CUSTOMER SUPPORT -->
+        <section class="support-panel">
+            <h2>Customer Support</h2>
+            <p>Have a question? Send us your query.</p>
+
+            <form id="supportForm">
+                <input type="text" id="supportName" placeholder="Your Name" required>
+                <input type="email" id="supportEmail" placeholder="Your Email" required>
+                <textarea id="supportMessage" placeholder="Write your query..." required></textarea>
+                <button type="submit">Submit Query</button>
+            </form>
+
+            <p id="supportResult"></p>
+            <p class="demo-note">Gaming project: queries are not sent to a real support team.</p>
+        </section>
+
+        <footer>
+            <p>© 2026 Gaming ID Center | Gaming Project</p>
+        </footer>
+
+    </main>
+
+    <!-- POPUP -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-box">
+            <button id="closeModal" class="close-btn">&times;</button>
+            <div id="modalContent"></div>
+            <div class="modal-actions">
+                <button id="okBtn">OK</button>
+                <button id="cancelBtn" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
